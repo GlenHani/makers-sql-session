@@ -59,17 +59,17 @@ class CountryDataApp < Sinatra::Base
 
   get '/all_data_country_name_and_population_only' do
     @data = CountryData.all_data_country_name_and_population_only
-    erb :display
+    erb :display_country
   end
 
   get '/south_american_countries_hide_population' do
     @data = CountryData.south_american_countries_hide_population
-    erb :display
+    erb :display_pop
   end
 
   get '/countries_not_in_asia_hide_gni_per_capita_and_population_density' do
     @data = CountryData.countries_not_in_asia_hide_gni_per_capita_and_population_density
-    erb :display
+    erb :display_gni
   end
 
   run! if app_file == $0
